@@ -31,5 +31,7 @@
 <c:otherwise><h1 style="color:green;text-align:center">Employees Not Available</h1></c:otherwise>
 </c:choose>
 <h1 style="color:green;text-align:center">${resultMsg}</h1>
+<h1 style="color:green;text-align:center">${updateMsg}</h1>
+<h1 style="color:green;text-align:center">${deleteMsg}</h1>
 
 <h2 style="color:green;text-align:center"><a href="add">Add Employee Record</a></h2>

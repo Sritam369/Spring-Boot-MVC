@@ -3,6 +3,7 @@ package com.sri.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,7 +46,23 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("/emp_edit")
-	public String editEmp(@RequestParam(name="empNo",required=false)Integer no) {
+	public String editEmp(@RequestParam(name="no",required=false)Integer no,@ModelAttribute("emp")Employee e1) {
+		Employee e = service.findId(no);
+		BeanUtils.copyProperties(e, e1);
 		return "edit_emp";
+	}
+	
+	@PostMapping("/edit")
+	public String editEmpData(@ModelAttribute("emp")Employee e,RedirectAttributes attr) {
+		String update = service.update(e);
+		attr.addFlashAttribute("updateMsg",update);
+		return "redirect:report";
+	}
+	
+	@GetMapping("/emp_delete")
+	public String deleteEmp(@RequestParam(name="no",required=false)Integer no,Map<String,Object>map) {
+		String msg = service.delete(no);
+		map.put("deleteMsg",msg);
+		return "forward:report";
 	}
 }
