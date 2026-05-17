@@ -20,7 +20,7 @@
 <td>${emp.sal}</td>
 <td>${emp.deptNo}</td>
 <td><a href="emp_edit?no=${emp.empNo}">Edit</a></td>
-<td><a href="emp_delete?no=${emp.empNo}">Delete</a></td>
+<td><a href="emp_delete?no=${emp.empNo}" onclick="return confirm('Do you want to delete this employee record ?')">Delete</a></td>
 
 </tr>
 </c:forEach>

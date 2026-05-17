@@ -1,6 +1,8 @@
 package com.sri.entity;
 
-import jakarta.annotation.Generated;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,13 +13,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.experimental.NonFinal;
 
 @Entity
 @Table(name="employee_mvc")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
+@SQLDelete(sql="UPDATE EMPLOYEE_MVC SET STATUS='DELETED' WHERE emp_no=?")
+@SQLRestriction(value="STATUS <> 'DELETED' ")
 public class Employee {
 
 	@Id
@@ -32,4 +35,5 @@ public class Employee {
 	private Double sal;
 	@NonNull
 	private Integer deptNo;
+	private String status="active";
 }
