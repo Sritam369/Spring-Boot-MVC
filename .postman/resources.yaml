@@ -1,0 +1,8 @@
+# Use this workspace to collaborate
+workspace:
+  id: 4d8749af-245a-4e34-88a8-57d912d797bb
+
+localResources:
+  docs:
+    - ..\BootMVCProj16-Pagination-Exam\HELP.md
+.md
