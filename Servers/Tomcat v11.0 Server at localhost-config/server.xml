@@ -136,7 +136,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="BootMVCProj16-Pagination-Exam" path="/BootMVCProj16-Pagination-Exam" reloadable="true" source="org.eclipse.jst.jee.server:BootMVCProj16-Pagination-Exam"/><Context docBase="BootRestProj01-FirstRestAPI" path="/BootRestProj01-FirstRestAPI" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj01-FirstRestAPI"/><Context docBase="BootRestProj02-SendingComplexDataAsJSON" path="/BootRestProj02-SendingComplexDataAsJSON" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj02-SendingComplexDataAsJSON"/><Context docBase="BootRestProj03-SendingComplexDataAsXML" path="/BootRestProj03-SendingComplexDataAsXML" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj03-SendingComplexDataAsXML"/><Context docBase="BootRestProj04-DataBindingInRestAPI" path="/BootRestProj04-DataBindingInRestAPI" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj04-DataBindingInRestAPI"/></Host>
+      <Context docBase="BootRestProj05-ExamApp1" path="/BootRestProj05-ExamApp1" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj05-ExamApp1"/><Context docBase="BootRestProj06-ExamApp2" path="/BootRestProj06-ExamApp2" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj06-ExamApp2"/><Context docBase="BootRestProj07-ExamApp3" path="/BootRestProj07-ExamApp3" reloadable="true" source="org.eclipse.jst.jee.server:BootRestProj07-ExamApp3"/></Host>
     </Engine>
   </Service>
 </Server>
