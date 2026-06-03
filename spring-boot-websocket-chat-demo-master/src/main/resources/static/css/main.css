@@ -1,0 +1,29 @@
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ececec;
+    background: #ffffff;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#logoutBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    min-height: auto;
+}
+
+#logoutBtn:hover {
+    background-color: #c82333;
+}
