@@ -17,6 +17,7 @@ public class MyRestController {
 		Product p = new Product(101,"mobile","electronics",25000.0);
 		return new ResponseEntity<Product>(p,HttpStatus.OK);
 	}
+	
 	@PutMapping("/update")
 	public ResponseEntity<Product> update(@RequestBody Product p){	
 		return new ResponseEntity<Product>(p,HttpStatus.OK);
